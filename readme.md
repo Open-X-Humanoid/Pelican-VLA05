@@ -141,14 +141,14 @@ manipulation-centric attention formed during pre-training.
 
 <table>
   <tr>
-    <td width="25%"><video src="https://github.com/Open-X-Humanoid/Pelican-VLA05/raw/main/asset/111.mp4" controls muted></video></td>
-    <td width="25%"><video src="https://github.com/Open-X-Humanoid/Pelican-VLA05/raw/main/asset/222.mp4" controls muted></video></td>
-    <td width="25%"><video src="https://github.com/Open-X-Humanoid/Pelican-VLA05/raw/main/asset/333.mp4" controls muted></video></td>
-    <td width="25%"><video src="https://github.com/Open-X-Humanoid/Pelican-VLA05/raw/main/asset/444.mp4" controls muted></video></td>
+    <td width="25%"><a href="asset/111.mp4"><img src="asset/111.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/222.mp4"><img src="asset/222.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/333.mp4"><img src="asset/333.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/444.mp4"><img src="asset/444.gif" width="100%"></a></td>
   </tr>
 </table>
 
-> If the videos do not play inline, view them directly:
+> Click a preview to open the original MP4:
 > [111.mp4](asset/111.mp4) · [222.mp4](asset/222.mp4) · [333.mp4](asset/333.mp4) · [444.mp4](asset/444.mp4)
 
 ## Limitations & Roadmap
