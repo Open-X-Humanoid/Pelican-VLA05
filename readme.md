@@ -139,16 +139,11 @@ embodiment. The policy reaches toward the correct instruction-relevant object an
 coherent, goal-directed motions — an early glimmer of generalization that emerges from the
 manipulation-centric attention formed during pre-training.
 
-<table>
-  <tr>
-    <td width="25%"><a href="asset/111.mp4"><img src="asset/111.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/222.mp4"><img src="asset/222.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/333.mp4"><img src="asset/333.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/444.mp4"><img src="asset/444.gif" width="100%"></a></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="asset/robottwin-demos.gif" width="100%">
+</p>
 
-> Click a preview to open the original MP4:
+> View the original MP4 demos:
 > [111.mp4](asset/111.mp4) · [222.mp4](asset/222.mp4) · [333.mp4](asset/333.mp4) · [444.mp4](asset/444.mp4)
 
 ## Limitations & Roadmap
