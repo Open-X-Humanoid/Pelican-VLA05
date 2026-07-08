@@ -141,15 +141,18 @@ manipulation-centric attention formed during pre-training.
 
 <table>
   <tr>
-    <td width="25%"><a href="asset/111.mp4"><img src="asset/111.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/222.mp4"><img src="asset/222.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/333.mp4"><img src="asset/333.gif" width="100%"></a></td>
-    <td width="25%"><a href="asset/444.mp4"><img src="asset/444.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/picking-up-bottle.mp4"><img src="asset/picking-up-bottle.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/placing-a-toy-car-onto-a-platform.mp4"><img src="asset/placing-a-toy-car-onto-a-platform.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/picking-up-a-beverage-bottle.mp4"><img src="asset/picking-up-a-beverage-bottle.gif" width="100%"></a></td>
+    <td width="25%"><a href="asset/turning-on-a-switch.mp4"><img src="asset/turning-on-a-switch.gif" width="100%"></a></td>
   </tr>
 </table>
 
 > View the original MP4 demos:
-> [111.mp4](asset/111.mp4) · [222.mp4](asset/222.mp4) · [333.mp4](asset/333.mp4) · [444.mp4](asset/444.mp4)
+> [picking-up-bottle.mp4](asset/picking-up-bottle.mp4) ·
+> [placing-a-toy-car-onto-a-platform.mp4](asset/placing-a-toy-car-onto-a-platform.mp4) ·
+> [picking-up-a-beverage-bottle.mp4](asset/picking-up-a-beverage-bottle.mp4) ·
+> [turning-on-a-switch.mp4](asset/turning-on-a-switch.mp4)
 
 ## Limitations & Roadmap
 
