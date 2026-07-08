@@ -78,6 +78,16 @@ and **91.0%** on *RoboTwin Randomized*, the best average among open-source VLA b
 * **Within 2 days:** organize and release the model, inference code, and visualization code.
 * **Within 2 weeks:** open-source the codebase.
 
+## Visualization and Reproducibility
+
+We will release visualization tools that can load our pre-trained model and run on your own
+collected data. These tools are intended to help users verify whether the model's attention
+focuses on the task-relevant object, the gripper, and the actionable manipulation region.
+
+We also commit that **RoboTwin data was not used during pre-training**. We will release the
+training code so the community can train the model and reproduce the RoboTwin zero-shot
+evaluation.
+
 ## Model Download
 
 We release the pre-trained backbone and the RoboTwin fine-tuned checkpoint.
@@ -143,10 +153,10 @@ manipulation-centric attention formed during pre-training.
 > [picking-up-a-beverage-bottle.mp4](asset/picking-up-a-beverage-bottle.mp4) ·
 > [turning-on-a-switch.mp4](asset/turning-on-a-switch.mp4)
 
-## Limitations & Roadmap
+## Limitations
 
 Pelican-VLA 0.5 is an intermediate stage toward practical zero-shot manipulation. The
-remaining **representation-to-action gap** is attributed mainly to data scale and action
+remaining **attention-to-action gap** is attributed mainly to data scale and action
 representation: the current checkpoint is trained on only ~2,400 hours of heterogeneous
 manipulation data and uses joint-position actions, which are more embodiment-specific than
 end-effector pose representations.
