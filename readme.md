@@ -99,7 +99,7 @@ huggingface-cli download X-Humanoid/Pelican-VLA05 --local-dir ./pretrained_model
 huggingface-cli download X-Humanoid/Pelican-VLA05-Robotwin --local-dir ./robotwin_model
 ```
 
-## Performance
+## Performance on RoboTwin
 
 On the RoboTwin 2.0 benchmark, Pelican-VLA 0.5 achieves the best average success rate among
 open-source VLA baselines in both the clean and randomized settings. The gap between the two
@@ -119,17 +119,6 @@ appearance of the scene.
 | Hy-VLA            | 90.9     | 90.1       | 90.5     |
 | **Pelican-VLA 0.5** | **91.4** | **91.0**   | **91.2** |
 
-**Zero-shot generalization.** Deployed directly on held-out RoboTwin 2.0 tasks with novel
-objects, novel scene layouts, and a new robot embodiment, Pelican-VLA 0.5 shows early
-zero-shot manipulation behavior — reaching toward the correct instruction-relevant object and
-producing coherent, goal-directed motions. Success rates in this strict zero-shot regime
-remain low, with failures concentrated at fine-grained stages (stable grasping, precise
-placement) rather than target selection.
-
-**Real-world robot.** Fine-tuned on teleoperated demonstrations and deployed on a real-world
-tabletop-cleanup task using the **TienKung** humanoid, Pelican-VLA 0.5 reaches an **80%**
-success rate, consistently selecting the correct objects, executing stable grasps, and
-placing them into the target container.
 
 ## Zero-shot in RoboTwin
 
