@@ -75,12 +75,12 @@ and **91.0%** on *RoboTwin Randomized*, the best average among open-source VLA b
 * **[2026-07-08]** The Pelican-VLA 0.5 [technical report](https://arxiv.org/abs/2607.06655)
   is released.
 * **[2026-07-14]** Model weights, inference code, and visualization code will be released.
-* **[2026-08-04]** Training code will be open-sourced.
+* **[2026-07-28]** Training code will be open-sourced.
 
 ## TODO
 
 * **July 14, 2026:** release the model weights, inference code, and visualization code.
-* **August 4, 2026:** open-source the training code.
+* **July 28, 2026:** open-source the training code.
 
 ## Visualization and Reproducibility
 
@@ -89,7 +89,7 @@ and run on your own collected data. These tools are intended to help users verif
 the model's attention focuses on the task-relevant object, the gripper, and the actionable
 manipulation region.
 
-We also commit that **RoboTwin data was not used during pre-training**. On August 4, 2026,
+We also commit that **RoboTwin data was not used during pre-training**. On July 28, 2026,
 we will release the training code so the community can train the model and reproduce the
 RoboTwin zero-shot evaluation.
 
