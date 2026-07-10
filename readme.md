@@ -1,9 +1,11 @@
-# Pelican-VLA 0.5: Attending Before Acting Benefits Generalization
+<h1 align="center">Pelican-VLA 0.5: Attending Before Acting Benefits Generalization</h1>
 
 <p align="center">
-  <a href="https://github.com/Open-X-Humanoid/Pelican-VLA05">Code</a> •
-  <a href="https://huggingface.co/X-Humanoid/Pelican-VLA05">Pre-trained Model</a> •
-  <a href="https://huggingface.co/X-Humanoid/Pelican-VLA05-Robotwin">RoboTwin Model</a>
+  <a href="https://arxiv.org/pdf/2607.06655"><img src="https://img.shields.io/static/v1?label=Paper&message=PDF&color=red&logo=arxiv"></a>
+  <a href="https://github.com/Open-X-Humanoid/Pelican-VLA05"><img src="https://img.shields.io/badge/Code-GitHub-black?logo=github"></a>
+  <a href="https://huggingface.co/X-Humanoid/Pelican-VLA05"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Pre--trained%20Model&message=HuggingFace&color=yellow"></a>
+  <a href="https://huggingface.co/X-Humanoid/Pelican-VLA05-Robotwin"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20RoboTwin%20Model&message=HuggingFace&color=yellow"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-green"></a>
 </p>
 
 <p align="center">
@@ -31,11 +33,11 @@ attention supervision, or task-specific fine-tuning, its action pathway already
 concentrates on the instruction-relevant object and its contact region. This behavior
 persists across unseen scenes and unseen robot embodiments.
 
-The key design is a compact set of learnable **Reasoning Slots** inserted between
+The key design is a compact set of learnable **bottleneck tokens** inserted between
 perception and action. Rather than letting the action pathway attend directly to dense
-visual tokens, the slots form a fixed-capacity bottleneck that routes manipulation-relevant
+visual tokens, the bottleneck tokens form a fixed-capacity interface that routes manipulation-relevant
 information into action generation. We verify that this manipulation-centric attention is
-induced specifically by the slot bottleneck, and that it transfers even to a MoT-style
+induced specifically by the bottleneck tokens, and that it transfers even to a MoT-style
 architecture.
 
 <p align="center">
@@ -45,7 +47,7 @@ architecture.
   <em>Overview of Pelican-VLA 0.5. A shared Qwen3-VL 4B backbone unifies visual-language
   understanding, future-frame prediction, and action generation. The input sequence contains
   four segments — vision-language <b>prefix</b>, temporal/world <b>middle</b> latents, 32
-  learnable <b>reasoning slots</b>, and a <b>suffix</b> of state and noisy action tokens. A
+  learnable <b>bottleneck tokens</b>, and a <b>suffix</b> of state and noisy action tokens. A
   single forward pass predicts future-frame latents, a compact task representation, and action
   denoising velocities.</em>
 </p>
@@ -59,7 +61,7 @@ and **91.0%** on *RoboTwin Randomized*, the best average among open-source VLA b
 <p align="center">
   <em>Component-wise ablation. Auxiliary losses alone (action / +image / +contrastive) do not
   induce object-centric attention; the manipulation-centric pattern emerges only when
-  perception is routed through the slot bottleneck (action + slot).</em>
+  perception is routed through the bottleneck tokens (action + bottleneck token).</em>
 </p>
 
 > Pelican-VLA 0.5 is an *intermediate* model toward truly generalizable VLA. It has already
@@ -70,27 +72,31 @@ and **91.0%** on *RoboTwin Randomized*, the best average among open-source VLA b
 
 ## News
 
-* **[2026-07-08]** Pelican-VLA 0.5 technical report, pre-trained weights, and RoboTwin
-  fine-tuned weights are released.
+* **[2026-07-08]** The Pelican-VLA 0.5 [technical report](https://arxiv.org/abs/2607.06655)
+  is released.
+* **[2026-07-14]** Model weights, inference code, and visualization code will be released.
+* **[2026-08-04]** Training code will be open-sourced.
 
 ## TODO
 
-* **Within 2 days:** organize and release the model, inference code, and visualization code.
-* **Within 2 weeks:** open-source the codebase.
+* **July 14, 2026:** release the model weights, inference code, and visualization code.
+* **August 4, 2026:** open-source the training code.
 
 ## Visualization and Reproducibility
 
-We will release visualization tools that can load our pre-trained model and run on your own
-collected data. These tools are intended to help users verify whether the model's attention
-focuses on the task-relevant object, the gripper, and the actionable manipulation region.
+On July 14, 2026, we will release visualization tools that can load our pre-trained model
+and run on your own collected data. These tools are intended to help users verify whether
+the model's attention focuses on the task-relevant object, the gripper, and the actionable
+manipulation region.
 
-We also commit that **RoboTwin data was not used during pre-training**. We will release the
-training code so the community can train the model and reproduce the RoboTwin zero-shot
-evaluation.
+We also commit that **RoboTwin data was not used during pre-training**. On August 4, 2026,
+we will release the training code so the community can train the model and reproduce the
+RoboTwin zero-shot evaluation.
 
 ## Model Download
 
-We release the pre-trained backbone and the RoboTwin fine-tuned checkpoint.
+The pre-trained backbone and the RoboTwin fine-tuned checkpoint will be released on
+July 14, 2026.
 
 | Model Name              | Hugging Face                                                                          | Description                                            |
 | ----------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -102,6 +108,7 @@ initialization) and the frozen **NVIDIA Cosmos-Tokenizer** (visual history / fut
 branch) are also required.
 
 ```bash
+# Available beginning July 14, 2026
 # Download the pre-trained model
 huggingface-cli download X-Humanoid/Pelican-VLA05 --local-dir ./pretrained_model
 
@@ -170,10 +177,13 @@ version trained on approximately **7,000 hours** of manipulation data, supersedi
 If you find our work useful in your research, please cite:
 
 ```bibtex
-@article{pelicanvla05,
+@article{ding2026pelican,
   title={Pelican-VLA 0.5: Attending Before Acting Benefits Generalization},
-  author={Beijing Innovation Center of Humanoid Robotics (X-Humanoid), WFM System Group},
-  year={2026}
+  author={Ding, Zeyuan and Liu, Wenhai and Xu, Yang and Hu, Jiayu and Chen, Yinda and
+          Zhang, Yi and Dai, Yong and Tang, Jian and Ju, Xiaozhu},
+  journal={arXiv preprint arXiv:2607.06655},
+  year={2026},
+  url={https://arxiv.org/abs/2607.06655}
 }
 ```
 
