@@ -37,8 +37,8 @@ from safetensors.torch import load_file, save_file
 from transformers.models.qwen3_vl import Qwen3VLConfig, Qwen3VLForConditionalGeneration
 
 from lerobot.configs.policies import PreTrainedConfig
-from lerobot.policies.basevla_4B.cosmos_tokenizer.image_lib import ImageTokenizer
-from lerobot.policies.basevla_4B.configuration_basevla import PelicanVLA05Config
+from lerobot.policies.pelicanvla05.cosmos_tokenizer.image_lib import ImageTokenizer
+from lerobot.policies.pelicanvla05.configuration_pelicanvla import PelicanVLA05Config
 from lerobot.policies.pretrained import PreTrainedPolicy
 from lerobot.utils.utils import format_big_number
 

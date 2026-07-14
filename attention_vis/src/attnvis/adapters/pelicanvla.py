@@ -1,7 +1,7 @@
 """PelicanVLAAdapter — wraps the PelicanVLA public inference release (currently 0.5).
 
-Upstream: `ATTNVIS_PELICANVLA_SRC` provides `lerobot.policies.basevla_4B`
-(the upstream module retains its historical name). Weights:
+Upstream: `ATTNVIS_PELICANVLA_SRC` provides `lerobot.policies.pelicanvla05`.
+Weights:
 `ATTNVIS_PELICANVLA_CKPT`. External deps: `QWEN3_VL_PATH` + `COSMOS_TOKENIZER_PATH`.
 
 Two-hop (bottleneck tokens): action doesn't look at image directly — it goes
@@ -157,8 +157,8 @@ class PelicanVLAAdapter(ModelAdapter):
         require(self.qwen3_vl_path, "QWEN3_VL_PATH")
         require(self.cosmos_path, "COSMOS_TOKENIZER_PATH")
 
-        from lerobot.policies.basevla_4B.modeling_basevla import BaseVLAPolicy
-        from lerobot.policies.basevla_4B.transform_basevla import Qwen3_VLProcessorTransformFn
+        from lerobot.policies.pelicanvla05.modeling_pelicanvla import BaseVLAPolicy
+        from lerobot.policies.pelicanvla05.transform_pelicanvla import Qwen3_VLProcessorTransformFn
 
         dtype = torch.float32 if self.dtype == "float32" else torch.bfloat16
         ck = _tolerant_ckpt(self.ckpt)

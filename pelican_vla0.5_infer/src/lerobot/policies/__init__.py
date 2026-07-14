@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .basevla_4B.configuration_basevla import (
+from .pelicanvla05.configuration_pelicanvla import (
     BaseVLAConfig as BaseVLAConfig,
     PelicanVLA05Config as PelicanVLA05Config,
 )

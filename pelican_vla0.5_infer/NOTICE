@@ -12,7 +12,7 @@ attribution details. A summary:
 
 - openpi / Physical Intelligence — Apache-2.0
   The flow-matching action-expert design and the pi0 policy scaffolding that
-  src/lerobot/policies/basevla_4B/modeling_basevla.py builds on derive from
+  src/lerobot/policies/pelicanvla05/modeling_pelicanvla.py builds on derive from
   openpi.
 
 - Hugging Face Transformers / Qwen3-VL — Apache-2.0

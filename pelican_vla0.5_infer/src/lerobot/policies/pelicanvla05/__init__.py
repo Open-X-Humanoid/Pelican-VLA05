@@ -11,18 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""Canonical PelicanVLA05 policy API.
+"""Canonical PelicanVLA05 policy API."""
 
-The implementation remains in the legacy ``basevla_4B`` module so existing
-imports and checkpoint-loading integrations continue to work.
-"""
-
-from lerobot.policies.basevla_4B.configuration_basevla import PelicanVLA05Config
-from lerobot.policies.basevla_4B.modeling_basevla import PelicanVLA05Policy
-from lerobot.policies.basevla_4B.transform_basevla import PelicanVLA05ProcessorTransformFn
+from .configuration_pelicanvla import BaseVLAConfig, PelicanVLA05Config
+from .modeling_pelicanvla import BaseVLAPolicy, PelicanVLA05Policy
+from .transform_pelicanvla import PelicanVLA05ProcessorTransformFn, Qwen3_VLProcessorTransformFn
 
 __all__ = [
     "PelicanVLA05Config",
     "PelicanVLA05Policy",
     "PelicanVLA05ProcessorTransformFn",
+    "BaseVLAConfig",
+    "BaseVLAPolicy",
+    "Qwen3_VLProcessorTransformFn",
 ]
