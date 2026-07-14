@@ -1,0 +1,34 @@
+PelicanVLA05 (inference-only release)
+Copyright 2026 The BaseVLA Authors.
+
+This product includes software developed by third parties, redistributed under
+their respective licenses. See THIRD_PARTY_LICENSES.md for the full list and
+attribution details. A summary:
+
+- LeRobot (Hugging Face) — Apache-2.0
+  Portions of src/lerobot/{configs,datasets,optim,policies,utils} derive from
+  LeRobot. Modified files carry a "Modifications Copyright 2026 The BaseVLA
+  Authors" line as required by Apache-2.0 section 4(b).
+
+- openpi / Physical Intelligence — Apache-2.0
+  The flow-matching action-expert design and the pi0 policy scaffolding that
+  src/lerobot/policies/basevla_4B/modeling_basevla.py builds on derive from
+  openpi.
+
+- Hugging Face Transformers / Qwen3-VL — Apache-2.0
+  The Qwen3-VL backbone is loaded from the installed `transformers` package.
+
+Model assets are licensed separately from this source distribution:
+
+- Qwen/Qwen3-VL-4B-Instruct weights — Apache-2.0.
+- NVIDIA Cosmos tokenizer weights — NVIDIA Open Model License. Products and
+  services using those weights must satisfy that license's notice, attribution,
+  and use requirements.
+
+No NVIDIA Cosmos training-network source is bundled. The local tokenizer module
+is a modified Apache-2.0 adapter for separately obtained TorchScript weights;
+it preserves NVIDIA's copyright notice and records the BaseVLA modifications.
+
+The public entry point is inference-focused. The model definition retains the
+training losses and generation modules needed to preserve checkpoint structure;
+training scripts and dataset builders are not distributed.

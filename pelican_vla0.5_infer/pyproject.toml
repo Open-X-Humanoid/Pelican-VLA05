@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pelicanvla05"
+version = "0.1.0"
+description = "Inference-only release of the PelicanVLA05 vision-language-action policy"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "The BaseVLA Authors" }]
+dependencies = [
+    "torch>=2.4",
+    "torchvision",
+    "transformers>=4.57",
+    "safetensors",
+    "numpy",
+    "draccus",
+    "huggingface_hub",
+    "packaging",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lerobot*"]

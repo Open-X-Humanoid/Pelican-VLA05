@@ -74,20 +74,30 @@ and **91.0%** on *RoboTwin Randomized*, the best average among open-source VLA b
 
 * **[2026-07-08]** The Pelican-VLA 0.5 [technical report](https://arxiv.org/abs/2607.06655)
   is released.
-* **[2026-07-14]** Model weights, inference code, and visualization code will be released.
+* **[2026-07-14]** Model weights, inference code, and visualization code are released.
 * **[2026-07-28]** Training code will be open-sourced.
 
 ## TODO
 
-* **July 14, 2026:** release the model weights, inference code, and visualization code.
-* **July 28, 2026:** open-source the training code.
+* [x] **July 14, 2026:** release the model weights, inference code, and visualization code.
+* [ ] **July 28, 2026:** open-source the training code.
 
 ## Visualization and Reproducibility
 
-On July 14, 2026, we will release visualization tools that can load our pre-trained model
-and run on your own collected data. These tools are intended to help users verify whether
+We have released [visualization tools](attention_vis/README.md) that can load our pre-trained
+model and run on your own collected data. These tools are intended to help users verify whether
 the model's attention focuses on the task-relevant object, the gripper, and the actionable
 manipulation region.
+
+For step-by-step instructions on how to visualize attention, see
+[`attention_vis/README.md`](attention_vis/README.md). It walks through installing the
+visualizer, wiring up the [inference release](pelican_vla0.5_infer/README.md) and checkpoints,
+dumping action-to-image attention, and rendering the figures.
+
+Beyond the datasets we ship, the visualizer also runs on **your own collected data**, as long
+as it is packaged as a [LeRobot 3.0](https://github.com/huggingface/lerobot) dataset. See
+[*Visualize on your own collected data*](attention_vis/README.md#visualize-on-your-own-collected-data)
+for how to register your recording and dump its attention.
 
 We also commit that **RoboTwin data was not used during pre-training**. On July 28, 2026,
 we will release the training code so the community can train the model and reproduce the
@@ -95,8 +105,8 @@ RoboTwin zero-shot evaluation.
 
 ## Model Download
 
-The pre-trained backbone and the RoboTwin fine-tuned checkpoint will be released on
-July 14, 2026.
+The pre-trained backbone and the RoboTwin fine-tuned checkpoint are now available on
+Hugging Face.
 
 | Model Name              | Hugging Face                                                                          | Description                                            |
 | ----------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -108,7 +118,6 @@ initialization) and the frozen **NVIDIA Cosmos-Tokenizer** (visual history / fut
 branch) are also required.
 
 ```bash
-# Available beginning July 14, 2026
 # Download the pre-trained model
 huggingface-cli download X-Humanoid/Pelican-VLA05 --local-dir ./pretrained_model
 

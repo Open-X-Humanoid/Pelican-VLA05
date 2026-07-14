@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attnvis"
+version = "0.1.0"
+description = "Cross-model VLA action→image attention visualization"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "attnvis contributors" }]
+keywords = ["vla", "attention", "visualization", "robotics"]
+
+# Core install = figure utilities only. Anyone handed an outputs/dense/ tree
+# from someone else can `pip install attnvis` and regenerate every figure
+# without touching a GPU or the PelicanVLA stack.
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "Pillow",
+]
+
+# `pip install attnvis[data]` — needed to run the dump path (reads HDF5 for
+# libero/robotwin, MP4 + parquet for LeRobot 3.0 datasets).
+[project.optional-dependencies]
+data = [
+  "opencv-python",   # sources/robotwin.py JPEG + sources/_lerobot_frame.py MP4 decode
+  "h5py",            # sources/libero.py + sources/robotwin.py HDF5
+  "pyarrow",         # sources/_lerobot_frame.py LeRobot v3 parquet metadata + state
+]
+
+[project.scripts]
+attnvis = "attnvis.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+attnvis = ["figs/*.yaml"]

@@ -1,0 +1,11 @@
+# Runtime dependencies for PelicanVLA05 inference.
+# Pin versions to match your training environment where it matters.
+
+torch>=2.4
+torchvision
+transformers>=4.57      # provides models.qwen3_vl
+safetensors
+numpy
+draccus
+huggingface_hub
+packaging

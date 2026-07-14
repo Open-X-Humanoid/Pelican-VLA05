@@ -1,1 +1,27 @@
+# paper source (kept out of the code release)
 /main.tex
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv
+.venv/
+.venv*
+.venv*/
+dist/
+build/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- generated data / artifacts ---
+*.npz
+*.npy
+logs/
+
+# --- env / editor / os ---
+.env
+.env.local
+.DS_Store
+.vscode/
+.idea/
